@@ -5,4 +5,5 @@ const ENTRY = "v2.4.1: fixed a bug where the human body shipped with a snooze bu
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "out";
 mkdirSync(outDir, { recursive: true });
+// Write the entry exactly as-is, no trailing newline.
 writeFileSync(join(outDir, "entry.txt"), ENTRY, "utf8");
